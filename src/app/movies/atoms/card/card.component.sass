@@ -1,0 +1,65 @@
+@import '../../../../variables'
+
+.movies
+  &__link
+    position: relative
+
+    &:hover
+      color: $text-hover
+
+    &:hover .movies__img
+      scale: 1.07
+
+    &:hover .movies__picture::before,
+    &:hover .movies__picture::after
+      opacity: 1
+      scale: 1
+
+  &__picture
+    border-radius: 5px
+    display: block
+    height: 240px
+    overflow: hidden
+    position: relative
+    width: fit-content
+
+    &::before,
+    &::after
+      content: ''
+      height: 100%
+      inset: 0
+      opacity: 0
+      position: absolute
+      transition: opacity 250ms ease, scale 250ms ease
+      width: 100%
+
+    &::before
+      background-color: rgba(0, 0, 0, 0.5)
+      z-index: 10
+
+    &::after
+      background: url('https://cdn-icons-png.flaticon.com/512/702/702132.png') no-repeat center center
+      background-size: 50%
+      filter: invert(1)
+      scale: .8
+      z-index: 20
+
+  &__vote-average
+    position: absolute
+    right: 4px
+    top: 4px
+
+  &__img
+    border-radius: 5px
+    cursor: pointer
+    object-fit: cover
+    transition: scale 200ms ease
+    width: fit-content
+
+  &__title
+    display: block
+    overflow: hidden
+    text-align: center
+    text-overflow: ellipsis
+    white-space: nowrap
+    width: 160px

@@ -1,0 +1,23 @@
+<h2 class="details__title">
+  {{ movie.title }}
+
+  <span class="details__release-date">
+    ({{ movie.release_date.slice(0, 4) }})
+  </span>
+</h2>
+
+<movies-genres [genres]="movie.genres" />
+
+<movies-votes
+  [voteAverage]="movie.vote_average"
+  voteText="Puntuación promedio"
+/>
+
+<span class="details__tagline">{{ movie.tagline }}</span>
+
+<h3 class="details__subtitle">Vista general</h3>
+<p class="details__desc">
+  {{ movie.overview }}
+</p>
+
+<movies-extra-info [movie]="movie" />

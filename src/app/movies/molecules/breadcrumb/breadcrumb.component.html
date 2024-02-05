@@ -1,0 +1,10 @@
+<div class="breadcrumb">
+  <a class="breadcrumb__link" routerLink="/movies/home"> Inicio </a>
+
+  <div *ngFor="let link of links">
+    &nbsp;>
+    <a class="breadcrumb__link" routerLink="/movies/details/{{ link }}">
+      {{ link | formatLink }}
+    </a>
+  </div>
+</div>

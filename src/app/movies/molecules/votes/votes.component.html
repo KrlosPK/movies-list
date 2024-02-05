@@ -1,0 +1,30 @@
+<div class="details__vote">
+  <span class="details__vote-average center" [ngStyle]="{ width: voteWidth }">
+    <div class="details__number" [ngStyle]="{ fontSize: voteFontSize }">
+      {{ voteAverage * 10 | number : "1.0-0" }}
+
+      <span class="details__percent"> % </span>
+    </div>
+
+    <div class="details__progress-circle-fill">
+      <svg class="details__icon" viewBox="0 0 40 40">
+        <circle r="15.915" cy="20" cx="20" />
+        <circle
+          cx="20"
+          cy="20"
+          r="15.9154943092"
+          [ngStyle]="{
+            strokeDashoffset: 100 - voteAverage * 10,
+            stroke:
+              (voteAverage * 10 >= 70 && '#21d07a') ||
+              (voteAverage * 10 >= 60 && voteAverage * 10 < 70 && '#db930c') ||
+              (voteAverage * 10 < 60 && '#db1a0c')
+          }"
+          transform="rotate(-90,20,20)"
+        />
+      </svg>
+    </div>
+  </span>
+
+  <h3 *ngIf="voteText">{{ voteText }}</h3>
+</div>

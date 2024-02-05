@@ -1,0 +1,37 @@
+@import '../../../../variables'
+
+.right-box-shadow
+  position: relative
+
+  &::after
+    background-image: linear-gradient(to right,rgba(255,255,255, 0) 0,#000 85%)
+    content: ''
+    height: 100%
+    pointer-events: none
+    position: absolute
+    right: 0
+    top: 0
+    width: 60px
+    will-change: opacity
+
+.movies
+  display: flex
+  gap: 1rem
+  overflow: auto
+  padding-bottom: 1rem
+  padding-right: 2.5rem
+
+  &::-webkit-scrollbar
+    display: none
+
+  @media screen and (min-width: 568px)
+    &::-webkit-scrollbar
+      background: $scroll-bg
+      border-radius: 5px
+      display: block
+      height: 5px
+
+    &::-webkit-scrollbar-thumb
+      background: $buttons-color
+      border-radius: 5px
+      width: 10%

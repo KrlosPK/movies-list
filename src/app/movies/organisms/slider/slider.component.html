@@ -1,0 +1,7 @@
+<article class="slider">
+  <h2>{{ sliderTitle }}</h2>
+
+  <movies-filters (moviesFilter)="handleReleaseFilter($event)" />
+
+  <movies-container [moviesList]="moviesList" />
+</article>

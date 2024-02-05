@@ -1,0 +1,47 @@
+@import '../../../../variables'
+
+.details
+  &__vote
+    align-items: center
+    display: flex
+    gap: .5rem
+
+  &__vote-average
+    aspect-ratio: 1
+    background: $background-color
+    border-radius: 50%
+    font-weight: bold
+    position: relative
+
+  &__icon
+    aspect-ratio: 1
+    width: 100%
+
+  &__progress-circle
+    &-fill
+      height: 100%
+
+      circle
+        fill: none
+        stroke-width: 3px
+        stroke: $vote-bg
+
+        &:nth-child(2)
+          animation: load-circle 1s
+          stroke-dasharray: 100
+          stroke-linecap: round
+
+  &__number
+    align-items: center
+    display: flex
+    left: 50%
+    position: absolute
+    top: 50%
+    translate: -50% -50%
+
+  &__percent
+    font-size: .65rem
+
+@keyframes load-circle
+  0%
+    stroke-dashoffset: 100

@@ -1,0 +1,36 @@
+@import '../../../../variables'
+
+.navigation
+  backdrop-filter: blur(7px) saturate(1.5)
+  background: #15131888
+  bottom: 0
+  padding: 6px 0
+  position: fixed
+  width: 100%
+  z-index: 30
+
+  &__list
+    display: flex
+    justify-content: space-evenly
+    margin: 0 auto
+    max-width: 768px
+
+  &__link
+    border-radius: $buttons-radius
+    gap: 6px
+    padding: $buttons-padding
+
+    @media screen and (min-width: 768px)
+      scale: 1.15
+
+    & > shared-image
+      height: 28px
+
+.active
+  background: $buttons-color
+
+  &__span
+    display: none
+
+  & &__span
+    display: block

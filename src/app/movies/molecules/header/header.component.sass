@@ -1,0 +1,25 @@
+@import '../../../../variables'
+
+.home
+  &__header
+    align-items: center
+    display: flex
+    justify-content: space-between
+    padding-bottom: 1rem
+
+  &__title
+    cursor: pointer
+    transition: opacity 300ms ease
+    user-select: none
+
+    &--purple
+      color: $buttons-color
+      transition: opacity 300ms ease
+
+    &:hover &--purple,
+    &:hover
+      opacity: .85
+
+  &__img
+    border-radius: 50%
+    object-fit: cover

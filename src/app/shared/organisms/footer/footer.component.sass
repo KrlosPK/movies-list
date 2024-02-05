@@ -1,0 +1,31 @@
+.footer
+  align-items: center
+  display: flex
+  justify-content: space-between
+  margin-block: 2rem
+
+  &__text
+    margin-right: 1rem
+
+  &__links
+    display: flex
+    gap: .5rem
+
+  &__image
+    aspect-ratio: 1
+    min-width: 24px
+
+  &__anchord
+    border-radius: 10px
+    display: block
+    filter: grayscale(100%)
+    padding: .5rem
+    transition: all 200ms ease-in-out
+
+    &--invert
+      filter: invert(20%)
+
+    &:hover
+      filter: grayscale(0) invert(0%)
+      scale: 1.1
+      translate: 0 -2px

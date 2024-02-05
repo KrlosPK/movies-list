@@ -1,0 +1,20 @@
+<ul class="details__aditional-info">
+  <li>
+    <h4>Estado</h4>
+    <span>{{ movie.status }}</span>
+  </li>
+
+  <li>
+    <h4>Presupuesto</h4>
+    <span>{{
+      movie.budget | currency : "COP" : "symbol-narrow" : "1.2-2"
+    }}</span>
+  </li>
+
+  <li>
+    <h4>Ingresos</h4>
+    <span>{{
+      movie.revenue | currency : "COP" : "symbol-narrow" : "1.2-2"
+    }}</span>
+  </li>
+</ul>

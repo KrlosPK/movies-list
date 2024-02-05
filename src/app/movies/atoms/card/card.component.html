@@ -1,0 +1,26 @@
+<a
+  class="movies__link"
+  routerLink="/movies/details/{{ movie.id }}:{{
+    movie.title.split(' ').join('_')
+  }}"
+  [title]="movie.title"
+>
+  <picture class="movies__picture">
+    <img
+      [alt]="movie.title"
+      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+      class="movies__img"
+      height="240"
+      width="120"
+    />
+  </picture>
+
+  <movies-votes
+    [voteAverage]="movie.vote_average"
+    class="movies__vote-average"
+    voteFontSize=".8rem"
+    voteWidth="50px"
+  />
+
+  <span class="movies__title">{{ movie.title }}</span>
+</a>

@@ -1,0 +1,8 @@
+<div class="filters">
+  <movies-button
+    [buttonTitle]="filter.name"
+    [isActive]="filter.isActive"
+    (click)="handleReleaseFilter(filter)"
+    *ngFor="let filter of moviesFilters"
+  />
+</div>

@@ -1,0 +1,25 @@
+<movies-pages-template>
+  <div class="movies__slider">
+    <movies-slider
+      (moviesFilter)="handleReleaseFilter($event, 'top_rated')"
+      [moviesList]="topRatedMovies"
+      sliderTitle="Mejor valorados"
+    />
+  </div>
+
+  <div class="movies__slider">
+    <movies-slider
+      (moviesFilter)="handleReleaseFilter($event, 'popular')"
+      [moviesList]="popularMovies"
+      sliderTitle="Tendencias"
+    />
+  </div>
+
+  <div class="movies__slider">
+    <movies-slider
+      (moviesFilter)="handleReleaseFilter($event, 'upcoming')"
+      [moviesList]="upcomingMovies"
+      sliderTitle="Próximamente"
+    />
+  </div>
+</movies-pages-template>

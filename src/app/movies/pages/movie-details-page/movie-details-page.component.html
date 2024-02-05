@@ -1,0 +1,26 @@
+<movies-pages-template>
+  <div
+    [ngStyle]="{
+      backgroundImage:
+        'url(https://image.tmdb.org/t/p/original' + movie.backdrop_path + ' )',
+      background: 'no-repeat center center',
+      backgroundSize: 'cover',
+      backdropFilter: 'opacity(20%)'
+    }"
+  >
+    <div class="details details--background-image details--padding">
+      <movies-breadcrumb [links]="links" />
+
+      <article class="details__article">
+        <movies-image
+          [alt]="movie.title"
+          [height]="609"
+          [src]="movie.poster_path"
+          [width]="406"
+        />
+
+        <movies-details-info [movie]="movie" />
+      </article>
+    </div>
+  </div>
+</movies-pages-template>
